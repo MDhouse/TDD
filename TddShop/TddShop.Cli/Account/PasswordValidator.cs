@@ -21,7 +21,33 @@ namespace TddShop.Cli.Account
         /// <returns></returns>
         public bool IsValid(string password)
         {
-            throw new NotImplementedException();
+            var result = false;
+
+            if (string.IsNullOrEmpty(password))
+            {
+                result = true;
+            }
+
+            if(password.Length >= 10)
+            {
+                result = true;
+            }
+
+
+            if (password.Any(item => Char.IsUpper(item)))
+            {
+                result = true;
+            }
+            else if (password.Any(item => Char.IsSymbol(item)))
+            {
+                result = true;
+            }
+            else if (password.Any(item => Char.IsLower(item)))
+            {
+                result = true;
+            }
+
+            return result;
         }
     }
 }

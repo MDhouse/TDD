@@ -25,6 +25,9 @@ namespace TddShop.Cli.Order
         /// <param name="order"></param>
         public void PlaceOrder(OrderModel order)
         {
+
+
+
             throw new NotImplementedException();
         }
     }
